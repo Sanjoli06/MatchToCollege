@@ -25,7 +25,7 @@ function App() {
         </h1>
       </div>
 
-      <div className="max-w-7xl mx-auto mb-12 px-4">
+      <div className="max-w-7xl mx-auto mb-12 px-3">
         <div className="grid grid-cols-1 md:grid-cols-10 items-center gap-4">
           <div className="md:col-span-3">
             <div className="flex items-center h-14 rounded-xl border border-gray-300 bg-white shadow-sm focus-within:ring-2 focus-within:ring-indigo-500">
@@ -42,9 +42,9 @@ function App() {
             </div>
           </div>
 
-          <div className="hidden md:block md:col-span-5" />
+          <div className="hidden md:block md:col-span-4" />
 
-          <div className="md:col-span-2">
+          <div className="md:col-span-3 lg:col-span-2 lg:mr-1 lg:pl-1 justify-content-end">
             <div className="relative h-14 rounded-xl border border-gray-300 bg-white shadow-sm focus-within:ring-2 focus-within:ring-indigo-500">
               <span className="absolute left-4 top-1/2 -translate-y-1/2 flex items-center justify-center text-gray-400">
                 <i className="fa-solid fa-arrow-up-wide-short"></i>
