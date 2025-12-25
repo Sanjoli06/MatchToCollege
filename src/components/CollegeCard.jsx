@@ -1,34 +1,81 @@
+import  {} from './CollegeCard.css';
 const CollegeCard = ({ college }) => {
   return (
-    <div className="bg-white rounded-xl p-10 shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200 overflow-hidden h-full flex flex-col justify-between relative min-h-[150px] w-full max-w-md mx-auto">
-      
-      <div className="absolute top-6 right-6">
-        <i className="fa-solid fa-heart text-gray-300 hover:text-red-500 cursor-pointer transition-colors text-lg"></i>
-      </div>
+    <div className="group relative w-full max-w-md mx-auto overflow-hidden rounded-2xl">
 
-      <div className="flex justify-center items-start mb-8">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center">
+      <div
+        className="
+          absolute inset-0
+          bg-cover bg-center
+          transition-all duration-500
+          group-hover:scale-110
+        "
+        style={{
+          backgroundImage: `url(${college.image})`,
+        }}
+      ></div>
+
+      <div className="
+        absolute inset-0
+        bg-black/30
+        transition-all duration-300
+        group-hover:bg-black/60
+      "></div>
+
+      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-white/40 to-transparent opacity-0 group-hover:opacity-100 animate-shimmer pointer-events-none"></div>
+
+      <div className="
+        relative
+        z-10
+        p-8
+        h-full
+        flex
+        flex-col
+        justify-between
+        transition-all
+        duration-300
+        text-white
+        opacity-80
+        group-hover:opacity-100
+        group-hover:-translate-y-2
+      ">
+
+        <div className="absolute top-5 right-5">
+          <i className="
+            fa-solid fa-heart
+            text-white/70
+            cursor-pointer
+            transition-all
+            duration-300
+            hover:text-red-500
+            hover:scale-125
+          "></i>
+        </div>
+
+        <h2 className="text-2xl font-semibold text-center mt-4 drop-shadow">
           {college.name}
         </h2>
-      </div>
 
-      <div className="flex-1 flex flex-col justify-center items-center mb-8">
-        <p className="text-base text-gray-600 flex items-center gap-2 px-4 text-center">
-          <i className="fa-solid fa-location-dot text-red-500 flex-shrink-0"></i>
-          <span>{college.city}</span>
-        </p>
-      </div>
+        <div className="flex justify-center items-center mt-6 mb-10">
+          <p className="flex items-center gap-2 text-white/90">
+            <i className="fa-solid fa-location-dot text-red-400"></i>
+            <span>{college.city}</span>
+          </p>
+        </div>
 
-      <div className="flex justify-center items-center pt-4 border-t border-gray-100">
-        <span className="text-yellow-500 font-semibold flex items-center gap-1 pr-12">
-          <i className="fa-solid fa-star flex-shrink-0"></i>
-          <span>{college.rating}</span>
-        </span>
+        <div className="flex justify-between items-center pt-4 border-t border-white/20">
 
-        <span className="text-green-600 font-semibold flex items-center gap-1 pl-12">
-          <i className="fa-solid fa-indian-rupee-sign flex-shrink-0"></i>
-          <span>{college.fees.toLocaleString()}</span>
-        </span>
+          <div className="flex items-center gap-2 text-yellow-400 font-semibold">
+            <i className="fa-solid fa-star"></i>
+            <span>{college.rating}</span>
+          </div>
+
+          <div className="flex items-center gap-1 text-green-400 font-semibold">
+            <i className="fa-solid fa-indian-rupee-sign"></i>
+            <span>{college.fees.toLocaleString()}</span>
+          </div>
+        </div>
+
       </div>
     </div>
   );
