@@ -1,8 +1,8 @@
 import  {} from './CollegeCard.css';
+import Star from './Star';
 const CollegeCard = ({ college }) => {
   return (
     <div className="group relative w-full max-w-md mx-auto overflow-hidden rounded-2xl">
-
       <div
         className="
           absolute inset-0
@@ -66,11 +66,10 @@ const CollegeCard = ({ college }) => {
         <div className="flex justify-between items-center pt-4 border-t border-white/20">
 
           <div className="flex items-center gap-2 text-yellow-400 font-semibold">
-            <i className="fa-solid fa-star"></i>
-            <span>{college.rating}</span>
+            <Star rating={college.rating} />
           </div>
 
-          <div className="flex items-center gap-1 text-green-400 font-semibold">
+          <div className="flex items-center gap-1 text-white-400 font-semibold">
             <i className="fa-solid fa-indian-rupee-sign"></i>
             <span>{college.fees.toLocaleString()}</span>
           </div>
