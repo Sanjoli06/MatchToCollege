@@ -34,7 +34,7 @@ function App() {
               </span>
               <input
                 type="text"
-                placeholder="Search colleges..."
+                placeholder="Search college..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="w-full h-full pr-4 text-gray-800 placeholder-gray-400 focus:outline-none"
@@ -79,7 +79,7 @@ function App() {
 
         {filteredColleges.length === 0 && (
           <div className="text-center py-12">
-            <p className="text-xl text-gray-600">No colleges found</p>
+            <p className="text-xl text-gray-600">No college found</p>
           </div>
         )}
       </div>
